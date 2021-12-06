@@ -1,0 +1,155 @@
+/* #### Text */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
+}
+
+main {
+  width: 87vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12em;
+}
+
+.container {
+  width: 87vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: white;
+  border-radius: 2em;
+}
+
+.images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-104px);
+          transform: translateY(-104px);
+  margin-bottom: -12.4em;
+}
+
+.icon-down {
+  position: absolute;
+  right: 45px;
+  margin-top: 2px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 31px;
+  margin-bottom: 18px;
+}
+
+.hero {
+  width: 72%;
+}
+
+.shadow {
+  -webkit-transform: translateY(-71px);
+          transform: translateY(-71px);
+}
+
+.faq {
+  margin-bottom: 45px;
+  padding: 0 5px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: white;
+  color: #787887;
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.border-box {
+  width: 90%;
+  border-bottom: 1px solid #787887;
+  -webkit-transform: translateX(6%);
+          transform: translateX(6%);
+  margin-top: 2px;
+  opacity: 0.2;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: white;
+  font-weight: bold;
+  color: black;
+}
+
+.active .icon-down, .accordion:hover .icon-down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  right: 45px;
+  margin-top: 2px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  color: #787887;
+  font-size: 12px;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  line-height: 18px;
+}
+
+.panel .border-box {
+  border-bottom: 1px solid #787887;
+  -webkit-transform: translateX(6%);
+          transform: translateX(6%);
+  margin-top: 17px;
+}
+/*# sourceMappingURL=style.css.map */
