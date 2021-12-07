@@ -31,15 +31,22 @@
         margin: 0;
         box-sizing: border-box;
     }
+
+    html {
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 12px;
+      background: rgb(193,128,236);
+background: linear-gradient(180deg, rgba(193,128,236,1) 0%, rgba(121,120,233,1) 100%);
+    }
     
     
     body {
-      font-family: 'Kumbh Sans', sans-serif;
+     
       font-size: 12px;
-      width : 100vw;
       display : flex;
       justify-content: center;
-      background: linear-gradient(to bottom, $Softviolet 0%, $Softblue 100%);
+      height: 100vh;
+      
     
     }
     
@@ -57,6 +64,8 @@
         align-content: center;
         background-color: white;
         border-radius: 2em;
+        box-shadow: 0px 42px 111px -41px rgba(0,0,0,0.69);
+
         
     }
     
@@ -91,7 +100,7 @@
     }
 
     .faq {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
       padding : 0 5px;
       
     }
@@ -103,7 +112,7 @@
         background-color: white; 
         color: $Darkgrayishblue;
         cursor: pointer;
-        padding: 16px;
+        padding: 15px;
         width: 100%;
         text-align: left;
         border: none;
@@ -111,12 +120,21 @@
         transition: 0.9s;
         
       }
-      .border-box {
+      .border-box-before {
         width: 90%;
         border-bottom : 1px solid $Darkgrayishblue;
         transform: translateX(6%);
         margin-top : 2px;
         opacity: 0.2;
+              
+      }
+      .border-box-after {
+          
+        border-bottom : 1px solid $Darkgrayishblue;
+        width: 100%;
+        margin-top: 18px;
+        opacity : 0.2;
+
               
       }
       
@@ -125,33 +143,145 @@
         background-color: white;
         font-weight: bold;
         color : black;
+        padding: 15px;
+        margin-top: 2px;
 
         .icon-down {
           transform : rotate(180deg);
           position : absolute;
           right: 45px;
           margin-top: 2px;
+          
        }
 
       }
       
       /* Style the accordion panel. Note: hidden by default */
       .panel {
-        padding: 0 18px;
+        padding: 0px 18px;
         background-color: white;
         display: none;
         overflow: hidden;
         color: $Darkgrayishblue;
         font-size: 12px;
         transform: translateY(-6px);
-        line-height: 18px;
+        line-height: 17px;
 
-        .border-box {
-          
-          border-bottom : 1px solid $Darkgrayishblue;
-          transform: translateX(6%);
-          margin-top: 17px;
-  
-                
-        }
+      
       }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+        margin-top: 11px;
+        font-weight: 600 ;
+      }
+      
+      
+
+      .attribution a {
+        color: #68e1fd;
+      }
+      .litle-box {
+        display: none;
+      }
+      .hero-desktop {
+        display: none;
+      }
+      .shadow-desktop {
+        display: none;
+      }
+    
+      // Desktop styles 
+
+      $breakpoint-tablet: 1000px;
+      @media (min-width: $breakpoint-tablet) {
+  
+        .container {
+          display: flex;
+          flex-direction: row;
+          max-width: 64vw;
+          transform: translate(25px, 15px);
+          min-height: 42.4em;
+
+          body {
+            z-index: 2;
+          }
+          
+          
+        }
+        main {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top : 0em;
+        }
+        
+        h1 {
+          text-align: left;
+          transform: translate(18px, 0px);
+          
+        }
+
+        .images {
+          display : flex;
+          width : 49%;
+          transform: translate(0px, 0px);
+          overflow : hidden;
+          
+          
+        }
+        .hero {
+          display : none;
+        }
+        .shadow {
+          display: none;
+        }
+        .hero-desktop {
+          display : block;
+          top : 2px;
+          transform: translate(-65px, 65px);
+
+        }
+
+        .shadow-desktop {
+          display :block;
+          position : absolute;
+          top: -299px;
+          left: -578px;
+          z-index: 0;
+        
+        }
+        .litle-box {
+          display : block;
+          position : absolute;
+          top: 196px;
+          left: -90px;
+          z-index: 1;
+        }
+        .div-boutons {
+          width : 350px;
+        }
+        .faq {
+          transform: translate(5px , 66px);
+        }
+        .icon-down {
+          position: absolute;
+          right: 9px;
+          margin-top: 4px;
+        }
+        .accordion {
+          padding: 16px;
+        }
+        .active, .accordion:hover {
+         
+          .icon-down { 
+
+            right: 10px;
+         }
+        }
+        .attribution {
+          margin-top: 2em;
+        }
+}

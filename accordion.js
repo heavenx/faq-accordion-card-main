@@ -12,6 +12,7 @@ for (var i = 0; i < acc.length; i++) {
 
     } else {
       panel.style.display = "block";
+      panel.style.marginTop = "0px";
 
     }
 
